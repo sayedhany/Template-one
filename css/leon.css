@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap");
+:root {
+  --main-color: #10cab7;
+  --second-color: #2c4755;
+}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -6,6 +10,7 @@
 }
 body {
   font-family: "Work Sans", sans-serif;
+  height: 5000px;
 }
 .parent {
   background-color: #eee;
@@ -84,6 +89,7 @@ body {
   min-width: 200px;
   top: calc(100% + 20px);
   display: none;
+  z-index: 1;
 }
 .header .links:hover ul {
   display: block;
@@ -111,3 +117,65 @@ body {
 .header .links ul li:not(:last-child) {
   border-bottom: 1px solid #ddd;
 }
+
+/* Start Landing style */
+.landing {
+  background-image: url("../images/photo-one.jpg");
+  background-size: cover;
+  background-position: 0%;
+  height: calc(100vh - 64px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.landing .intro-text {
+  margin-top: 50px;
+  max-width: 100%;
+}
+.landing .intro-text h1 {
+  margin: 0;
+  color: var(--main-color);
+  font-weight: bold;
+  font-family: inherit;
+  font-size: 55px;
+  text-align: center;
+}
+.landing .intro-text p {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 20px;
+  color: var(--second-color);
+  line-height: 1.8;
+}
+/* End Landing style */
+
+/* start Features section */
+.features {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #f6f6f6;
+}
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.features .feat {
+  padding: 20px;
+  text-align: center;
+}
+.features .feat i {
+  color: var(--main-color);
+}
+.features .feat h3 {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 30px 0;
+  color: var(--second-color);
+}
+.features .feat p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #777;
+}
+/* end Features section */
